@@ -1,0 +1,9 @@
+[
+  {
+    "id":"Z00null", "record_type":"seed", "title":"Zero Point (fictional draft)",
+    "description":"Placeholder seed, not a chemical element or established physical mechanism.",
+    "status":"draft", "domain":"fiction", "source_refs":["https://docs.google.com/document/d/1HXkgSjDK7H_1VdhKm3SzFRXPsyH6AJ2vj9G6bt2s22k/edit"],
+    "created_at":"2026-10-21", "updated_at":"2026-10-21", "version":"0.1.0",
+    "change_reason":"Validator example; no canon promotion", "approved_by":null, "approval_ref":null, "tests":[]
+  }
+]
