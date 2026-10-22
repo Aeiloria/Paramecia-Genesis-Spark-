@@ -1,0 +1,24 @@
+name: Genesis Spark v2 validator (draft)
+on:
+  pull_request:
+  push:
+    branches:
+      - feat/genesis-spark-v2-validation
+permissions:
+  contents: read
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run isolated validator tests
+        run: python -m unittest discover -s tools/tests -v
+        env:
+          PYTHONPATH: tools
+      - name: Confirm draft fixture validates without canon promotion
+        run: python -m genesis_spark.validator tools/fixtures/genesis-spark-draft.json
+        env:
+          PYTHONPATH: tools
